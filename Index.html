@@ -34,6 +34,19 @@
                 <button onclick="reloadFrame()">Reload Map</button>
                 <button onclick="toggleFullscreen()">View Fullscreen</button>
             </div>
+            <script>
+            function reloadFrame() {
+                const frame = document.querySelector('iframe');
+                frame.src = frame.src;
+            }
+
+            function toggleFullscreen() {
+                const frame = document.querySelector('iframe');
+                if (frame.requestFullscreen) {
+                    frame.requestFullscreen();
+                }
+            }
+            </script>
 
         </section>
 
